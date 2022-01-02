@@ -1,0 +1,109 @@
+.introducao {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6.25rem;
+  align-items: center;
+}
+
+.introducao h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 1.825rem;
+  position: relative;
+}
+
+.introducao h1::before {
+  content: "";
+  display: block;
+  width: 8.125rem;
+  height: 6.25rem;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute;
+  top: -0.9375rem;
+  left: -2.5rem;
+  z-index: -1;
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+  position: relative;
+}
+
+.praia {
+  display: inline-block;
+  margin: 0 1rem;
+  position: absolute;
+  top: -0.8rem;
+}
+
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+
+  .introducao {
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem;
+  }
+
+  .introducao h1 {
+    font-size: 3rem;
+  }
+
+  .introducao h1::before {
+    width: 1.875rem;
+    height: 0.625rem;
+    left: 0;
+  }
+
+  .introducao p {
+    font-size: 1.2rem;
+    color: #525252;
+    position: static;
+  }
+
+  .praia {
+    position: static;
+    top: 10px;
+    left: 0;
+    display: block;
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .introducao h1 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+
+  .introducao > img {
+    display: none;
+  }
+
+  .introducao h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .introducao h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
+}
